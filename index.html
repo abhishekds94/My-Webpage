@@ -24,6 +24,9 @@
        href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
     />
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/octicons.min.css">
+    <link rel="stylesheet" href="assets/plugins/github-activity/github-activity-0.1.5.min.css">
+
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
 
@@ -227,21 +230,20 @@
                 
                 <section class="github section">
                     <div class="section-inner">
-                        <h2 class="heading">My GitHub</h2>
-                        <p>You can embed your GitHub contribution graph calendar using IonicaBizau's <a href="https://github.com/IonicaBizau/github-calendar" target="_blank">GitHub Calendar</a> widget. 
+                        <h2 class="heading">My GitHub Activities</h2>
+                        <h5><a href="https://github.com/IonicaBizau/github-calendar" target="_blank">My GitHub Calendar</a> widget</h5>
                         
-
-
                         <!-- Prepare a container for your calendar. -->
                         <div class="calendar">
                             <!-- Loading stuff -->
                             Loading the data just for you.
                         </div>
 
+                        <br/>
 
-                        <p>You can also embed your GitHub activities using Casey Scarborough's <a href="https://caseyscarborough.com/projects/github-activity/" target="_blank">GitHub Activity Stream</a> widget.        
+                        <h5><a href="https://caseyscarborough.com/projects/github-activity/" target="_blank">My GitHub Activity Stream</a> widget</h5>
                         <!--//Usage: https://caseyscarborough.com/projects/github-activity/ -->                       
-                        <div id="ghfeed" class="ghfeed">
+                        <div id="feed" class="ghfeed">
 
                             
 
@@ -446,7 +448,7 @@
     <!-- github calendar plugin -->
     <script type="text/javascript" src="assets/plugins/github-calendar/dist/github-calendar.min.js"></script>
     <!-- github activity plugin -->
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.min.js"></script>
     <script type="text/javascript" src="assets/plugins/github-activity/github-activity-0.1.5.min.js"></script>
     <!-- custom js -->
     <script type="text/javascript" src="assets/js/main.js"></script>   
@@ -460,6 +462,14 @@
         GitHubCalendar(".calendar", "Abhishekds94");
         // or enable responsive functionality
         GitHubCalendar(".calendar", "Abhishekds94", { responsive: true });
+    </script>
+
+    <script type="text/javascript">
+    GitHubActivity.feed({
+        username: "Abhishekds94",
+        selector: "#feed",
+        limit: 20 // optional
+    });
     </script>
 
 </body>
