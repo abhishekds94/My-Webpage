@@ -50,51 +50,20 @@
 
 
     <style style="text/css">
-    .scroll-left {
-     height: 50px;  
-     overflow: hidden;
-     position: relative;
-     background: #9fdeb7;
-     color: #000;
-     border: 1px solid #778492;
-    }
-    .scroll-left p {
-     position: absolute;
-     width: 100%;
-     height: 100%;
-     margin: 0;
-     line-height: 50px;
-     text-align: center;
-     /* Starting position */
-     -moz-transform:translateX(100%);
-     -webkit-transform:translateX(100%);    
-     transform:translateX(100%);
-     /* Apply animation to this element */  
-     -moz-animation: scroll-left 15s linear infinite;
-     -webkit-animation: scroll-left 15s linear infinite;
-     animation: scroll-left 15s linear infinite;
-    }
-    /* Move it (define the animation) */
-    @-moz-keyframes scroll-left {
-     0%   { -moz-transform: translateX(100%); }
-     100% { -moz-transform: translateX(-100%); }
-    }
-    @-webkit-keyframes scroll-left {
-     0%   { -webkit-transform: translateX(100%); }
-     100% { -webkit-transform: translateX(-100%); }
-    }
-    @keyframes scroll-left {
-     0%   { 
-     -moz-transform: translateX(100%); /* Browser bug fix */
-     -webkit-transform: translateX(100%); /* Browser bug fix */
-     transform: translateX(100%);       
-     }
-     100% { 
-     -moz-transform: translateX(-100%); /* Browser bug fix */
-     -webkit-transform: translateX(-100%); /* Browser bug fix */
-     transform: translateX(-100%); 
-     }
-    }
+        .card {
+          box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+          transition: 0.3s;
+          width: 100%;
+          border-radius: 5px;
+        }
+
+        .card:hover {
+          box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .title {
+          padding: 2px 16px;
+        }
     </style>
 
     
@@ -119,8 +88,10 @@
 
     <br><br>
 
-    <div class="scroll-left">
-        <p style="width: 800px;">Looking for Full-time Android developer roles || Open for Relocation anywhere in the US </p>
+    <div class="card">
+      <div class="title">
+        <p><center><b>Looking for Full-time Android developer roles || Open for Relocation anywhere in the US</b></center></p> 
+      </div>
     </div>
     
     <div class="container sections-wrapper" style="padding-top: 40px;">
